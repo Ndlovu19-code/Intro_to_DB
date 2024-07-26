@@ -1,6 +1,5 @@
--- List all tables in the alx_book_store database
+-- Ensure we are using the correct database
+USE alx_book_store;
 
+-- List all tables in the database
 SHOW TABLES;
-git add task_3.sql
-git commit -m "Add script to list all tables in alx_book_store database"
-git push origin main
