@@ -1,16 +1,17 @@
-USE INFORMATION_SCHEMA;
+-- task_4.sql
 
+-- Select the table schema information for the 'books' table
 SELECT 
-    TABLE_NAME AS `Table Name`,
     COLUMN_NAME AS `Column Name`,
     COLUMN_TYPE AS `Column Type`,
     IS_NULLABLE AS `Is Nullable`,
     COLUMN_DEFAULT AS `Default Value`,
     EXTRA AS `Extra`
 FROM 
-    COLUMNS
+    INFORMATION_SCHEMA.COLUMNS
 WHERE 
-    TABLE_SCHEMA = 'alx_book_store'
-    AND TABLE_NAME = 'books';
-
+    TABLE_SCHEMA = DATABASE() AND 
+    TABLE_NAME = 'books'
+ORDER BY 
+    ORDINAL_POSITION;
 
